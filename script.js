@@ -12,43 +12,56 @@ var symbolConfirm = confirm("Do you want symbols?");
 
 
 
-var passwordBuildArray = [];
+var passwordText = [];
 var passwordArray = [];
 
 var passLength = parseInt(myPasswordLength);
-console.log("passLength", passLength)
+console.log("passLength", passLength);
 
-var randomize = Math.floor(Math.random() * Math.floor);
+function randomize(max, min) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
 
 
+//if (uppercaseConfirm && numbersConfirm) {
+//passwordArray = upperLetters.concat(numbers);
+//}
+//if (uppercaseConfirm && symbolConfirm) {
+//   passwordArray = upperLetters.concat(characters);
+// }
+// if (numbersConfirm && symbolConfirm) {
+//   passwordArray = numbers.concat(characters);
+// }
+// if (uppercaseConfirm && numbersConfirm && symbolConfirm) {
+//   passwordArray = upperLetters.concat(numbers)(characters);
+// }
+
+function generatePassword() {
+  myPasswordLength = [""];
+
+//check bool value of charsets
+//if okay  push into password
+//random select chars from password n times (n=passwordLenght)
+//push into the final password to dispaly 
 if (uppercaseConfirm) {
-  passwordArray = upperLetters;
+    passwordArray = passwordArray.concat(upperLetters);
+  }
+  if (numbersConfirm) {
+    passwordArray = passwordArray.concat(numbers);
+  }
+  if (symbolConfirm) {
+    passwordArray = passwordArray.concat(characters);
 }
-if (numbersConfirm) {
-  passwordArray = numbers;
-}
-if (symbolConfirm) {
-  passwordArray = upperLetters;
-}
-if (uppercaseConfirm && numbersConfirm) {
-  passwordArray = upperLetters.concat(numbers);
-}
-if (uppercaseConfirm && symbolConfirm) {
-  passwordArray = upperLetters.concat(characters);
-}
-if (numbersConfirm && symbolConfirm) {
-  passwordArray = numbers.concat(characters);
-}
-if (uppercaseConfirm && numbersConfirm && symbolConfirm) {
-  passwordArray = upperLetters.concat(numbers)(characters);
-}
-console.log("")
+    return passwordArray[randomize(passwordArray.length, 0)];
+
+  }
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 for (var i = 0; i < passLength; i++) {
-  passwordBuildArray.push(passwordArray[randomize])
+passwordText.push(passwordArray[randomize])
 }
 
 // Write password to the #password input
@@ -56,13 +69,13 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-  return password;
-
+  passwordText.value = password; 
+  //console.log(password);
+  return (password);
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+ 
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
 
 
 
@@ -74,7 +87,7 @@ generateBtn.addEventListener("click", writePassword);
 //      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
 //      retVal = "";
 //  for (var i = 0, n = charset.length; i < length; ++i) {
-//      retVal += charset.charAt(Math.floor(Math.random() * n));
+//      retVal += charset.charAt(Matrh.floor(Math.random() * n));
 //  }
 //  return retVal;
 //}
