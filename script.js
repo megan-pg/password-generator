@@ -4,6 +4,9 @@ var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var characters = ["!", "@", "#", "$", "%", "&", "*"];
 
+var generateBtn = document.querySelector("#generate");
+console.log(passwordArray)
+
 //Prompts and confirmations
 var myPasswordLength = prompt("How many characters do you want in your password? (Please enter a number no larger than 20)");
 var uppercaseConfirm = confirm("Do you want uppercase letters?");
@@ -22,62 +25,48 @@ function randomize(max, min) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+generateBtn.addEventListener("click", writePassword) function generatePassword() {
+  passwordArray.textContent = password;
+  myPasswordLength = [];
 
-//if (uppercaseConfirm && numbersConfirm) {
-//passwordArray = upperLetters.concat(numbers);
-//}
-//if (uppercaseConfirm && symbolConfirm) {
-//   passwordArray = upperLetters.concat(characters);
-// }
-// if (numbersConfirm && symbolConfirm) {
-//   passwordArray = numbers.concat(characters);
-// }
-// if (uppercaseConfirm && numbersConfirm && symbolConfirm) {
-//   passwordArray = upperLetters.concat(numbers)(characters);
-// }
-
-function generatePassword() {
-  myPasswordLength = [""];
-
-//check bool value of charsets
-//if okay  push into password
-//random select chars from password n times (n=passwordLenght)
-//push into the final password to dispaly 
+  //check bool value of charsets
+  //if okay  push into password
+  //random select chars from password n times (n=passwordLenght)
+  //push into the final password to display 
 if (uppercaseConfirm) {
-    passwordArray = passwordArray.concat(upperLetters);
+        passwordArray = passwordArray.concat(upperLetters);
+    
+if (numbersConfirm) {
+      passwordArray = passwordArray.concat(numbers);
   }
-  if (numbersConfirm) {
-    passwordArray = passwordArray.concat(numbers);
-  }
-  if (symbolConfirm) {
-    passwordArray = passwordArray.concat(characters);
+if (symbolConfirm) {
+      passwordArray = passwordArray.concat(characters);
 }
-    return passwordArray[randomize(passwordArray.length, 0)];
-
-  }
+  return passwordArray[randomize(passwordArray.length, 0)];
+    
+}
 
 
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
 
 for (var i = 0; i < passLength; i++) {
-passwordText.push(passwordArray[randomize])
-}
+  passwordText.push(passwordArray[randomize])
+    }
+  console.log(passwordText)
+  
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-  passwordText.value = password; 
-  //console.log(password);
-  return (password);
-}
+    passwordText.value = password;
+    //console.log(password);
+    return (password);
+  }
  
-  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
-
-
+// Add event listener to generate button
+//generateBtn.addEventListener("click", writePassword); 
 
 
 //buildString()
