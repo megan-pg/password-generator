@@ -42,12 +42,15 @@ I still do not know how to connect the pieces. I have the peices of code to make
 know how they assemble together correctly to make a working javascript file. I was told to put several peices of code
 inside a specific function, and that's when the document stopped producing any results. What confuses me the most is, I
   only changed the location of the content, and I am frustrated that my crappy ugly content worked better than the organized 
-  version does. I spent every day on this and I failed. I read the javascript cheatsheets provided - but it doesn't tell you 
-  where things need to be housed in relation to one another. MDN doesn't tell you this either. 
+  version does. I spent every day on this and I failed. Despite reading the javascript cheatsheets and MDN, I know code
+  to use, but don't understand the exact location pieces of code need to be in order to make the code talk to one another. 
+  My for loop seemed to work better outside of a function... and yet that sounds wrong. I feel like I was close with 
+  script.js commit 58966d3b8a4cae94f84c0bee6ff4ef035624fcc6.
 
 So if you want to see javacript that understand it needs to produce a designated amount of characters, but doesn't know where
 from, and yet does produce characters from the if statements you tell it to, go to script.js commit
-58966d3b8a4cae94f84c0bee6ff4ef035624fcc6 - it was SOOOOOO CLOSE.
+58966d3b8a4cae94f84c0bee6ff4ef035624fcc6 and relink it to the html file - it was SOOOOOO CLOSE - just ugly as sin and missing
+something.
 If you want to see clean and organized javascript that should be logical that doesn't work except for the prompt, alert, and 
-confirms, see script3.js that is appart of the latest commit. 
-      
+confirms, see script3.js that is appart of the latest commit (obviously something is definitely missing but the debugger 
+thinks the for loop screws up thew syntax.
