@@ -25,58 +25,42 @@ function randomize(max, min) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-generateBtn.addEventListener("click", writePassword) function generatePassword() {
-  passwordArray.textContent = password;
-  myPasswordLength = [];
+generateBtn.addEventListener("click", writePassword) {
+  function generatePassword() {
+    passwordArray.textContent = password;
+    myPasswordLength = [];
 
-  //check bool value of charsets
-  //if okay  push into password
-  //random select chars from password n times (n=passwordLenght)
-  //push into the final password to display 
 if (uppercaseConfirm) {
         passwordArray = passwordArray.concat(upperLetters);
-    
-if (numbersConfirm) {
-      passwordArray = passwordArray.concat(numbers);
-  }
-if (symbolConfirm) {
-      passwordArray = passwordArray.concat(characters);
-}
-  return passwordArray[randomize(passwordArray.length, 0)];
-    
-}
+      
+numbersConfirm) {
+         passwordArray = passwordArray.concat(numbers);
+        
+       (symbolConfirm) {
+        asswordArray = passwordArray.concat(characters);
+        
+        return passwordArray[randomize(passwordArray.length, 0)];
+     
 
+    
 
 // Assignment Code
-
+    
 for (var i = 0; i < passLength; i++) {
-  passwordText.push(passwordArray[randomize])
-    }
+      passwordText.push(passwordArray[randomize])
+        }
   console.log(passwordText)
   
 
   // Write password to the #password input
-  function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
+    function writePassword() {
+      var password = generatePassword();
+      passwordText = document.querySelector("#password");
+      
     passwordText.value = password;
-    //console.log(password);
-    return (password);
-  }
- 
-// Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword); 
-
-
-//buildString()
-
-//function generatePassword() {
-//  var length = 8,
-//      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-//      retVal = "";
-//  for (var i = 0, n = charset.length; i < length; ++i) {
-//      retVal += charset.charAt(Matrh.floor(Math.random() * n));
-//  }
-//  return retVal;
-//}
+      console.log(password);
+      eturn (password);
+     
+    
+/ Add event listener to generate button
+//generateBtn.addEventListener("click", writePassword)
