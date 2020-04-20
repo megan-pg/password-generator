@@ -4,9 +4,6 @@ var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var characters = ["!", "@", "#", "$", "%", "&", "*"];
 
-var generateBtn = document.querySelector("#generate");
-console.log(passwordArray)
-
 //Prompts and confirmations
 var myPasswordLength = prompt("How many characters do you want in your password? (Please enter a number no larger than 20)");
 var uppercaseConfirm = confirm("Do you want uppercase letters?");
@@ -25,42 +22,40 @@ function randomize(max, min) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-generateBtn.addEventListener("click", writePassword) {
-  function generatePassword() {
-    passwordArray.textContent = password;
-    myPasswordLength = [];
+
+function generatePassword() {
+  myPasswordLength = [""];
 
 if (uppercaseConfirm) {
-        passwordArray = passwordArray.concat(upperLetters);
-      
-numbersConfirm) {
-         passwordArray = passwordArray.concat(numbers);
-        
-       (symbolConfirm) {
-        asswordArray = passwordArray.concat(characters);
-        
-        return passwordArray[randomize(passwordArray.length, 0)];
-     
+      passwordArray = passwordArray.concat(upperLetters);
+  }
+  if (numbersConfirm) {
+    passwordArray = passwordArray.concat(numbers);
+  }
+  if (symbolConfirm) {
+    passwordArray = passwordArray.concat(characters);
+}
+  return passwordArray[randomize(passwordArray.length, 0)];
+  
+}
 
-    
 
 // Assignment Code
-    
-for (var i = 0; i < passLength; i++) {
-      passwordText.push(passwordArray[randomize])
-        }
-  console.log(passwordText)
-  
+var generateBtn = document.querySelector("#generate");
 
-  // Write password to the #password input
-    function writePassword() {
-      var password = generatePassword();
-      passwordText = document.querySelector("#password");
-      
-    passwordText.value = password;
-      console.log(password);
-      eturn (password);
-     
-    
-/ Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword)
+for (var i = 0; i < passLength; i++) {
+passwordText.push(passwordArray[randomize])
+  }
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password; 
+  console.log(password);
+  return (password);
+}
+ 
+//Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
