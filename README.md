@@ -1,34 +1,25 @@
 # password-generator
 This assignment's purpose was to create a password generator that
-
 pulled several characters from an array or arrays.
 
 I chose to have the javascript concat the 4 established arrays into one larger array. 
   
 
 This only worked in commit 58966d3b8a4cae94f84c0bee6ff4ef035624fcc6, which was by far 
-
 the most funcational of the scripts developed, despite not being organized.
-
 This commit received the number of characters desired but could not define the
+strings to pull from the array. 
 
-strings to pull from the array. It did push characters with the selected attributes the user
-  
+It did push characters with the selected attributes the user
 designated into the password field, but only one character at a time. An example of this would be
-  
 if the user chose Uppercase Letters and Numbers, only a single Uppercase Letter or Number would 
-  
 appear in the password field. The Console in the Insepect element of the website showed that if 
-  
 a user enter 5 for desired characters, the password would have 5 undefined indexes in the 
-
 password console log.  
 
 
 Upon cleaning the code and reorganizing it, thinking that was the issue (and also because it just neededed
- 
 to be clean), the script no longer pushes any characters to the password field. It also doesn't recognize
-
 the password array.
 
  Additional issues that arose from reorganizing:
@@ -43,17 +34,12 @@ the password array.
     -the console logs to try and figure out what the disconnect is aren't working either. 
       
 There are 5 javescript files because code I looked up online corrupted my orginal file and consequently all script
-
 files that weren't retyped by hand (no copying at all) became corrupt. That completely from scratch file is script3.js.
-
 Please see amazing screenshot of corruption messing with the colors of the document - again, no syntax errors, it's just 
-
 glitching.
 
 I still do not know how to connect the pieces. I have the peices of code to make things work - I do not 
-
 know how they assemble together correctly to make a working javascript file. I was told to put several peices of code
-
 inside a specific function, and that's when the document stopped producing any results. What confuses me the most is, I
   only changed the location of the content, and I am frustrated that my crappy ugly content worked better than the organized 
   version does. I spent every day on this and I failed. I read the javascript cheatsheets provided - but it doesn't tell you 
