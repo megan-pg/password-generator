@@ -54,3 +54,6 @@ something.
 If you want to see clean and organized javascript that should be logical that doesn't work except for the prompt, alert, and 
 confirms, see script3.js that is appart of the latest commit (obviously something is definitely missing but the debugger 
 thinks the for loop screws up thew syntax.
+
+*****EDIT*****
+script6.js reverts back to the commit of 58966d3b8a4cae94f84c0bee6ff4ef035624fcc6 to mirror the placement of the code, with the addition of calling the generatePassword. I thought I was doing this as well as defining it, but it seems it needed it in the for loop. I still can't get the passwords to appear on the website in the password field, but they are being generated, which can be seen in the Inspect feature. It's a start.
