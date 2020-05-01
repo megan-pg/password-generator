@@ -56,4 +56,17 @@ confirms, see script3.js that is appart of the latest commit (obviously somethin
 thinks the for loop screws up thew syntax.
 
 *****EDIT*****
-script6.js reverts back to the commit of 58966d3b8a4cae94f84c0bee6ff4ef035624fcc6 to mirror the placement of the code, with the addition of calling the generatePassword. I thought I was doing this as well as defining it, but it seems it needed it in the for loop. I still can't get the passwords to appear on the website in the password field, but they are being generated, which can be seen in the Inspect feature. It's a start.
+script6.js reverts back to the commit of 58966d3b8a4cae94f84c0bee6ff4ef035624fcc6 to mirror the placement of the code, with 
+the addition of calling the generatePassword. I thought I was doing this as well as defining it, but it seems it needed it in 
+the for loop. I still can't get the passwords to appear on the website in the password field, but they are being generated, 
+which can be seen in the Inspect feature. It's a start.
+
+****EDIT 2****
+I have uploaded a corrections after working with my tutor.
+My prompts and confirms feed my arrays better and there are is an additional array to collect the concated string arrays, 
+which then feed into the passwordArray.
+I am calling the generatePassword function better and call writePassword fucntion this time. 
+There are now error messages if the parameters of the password are not met, such as minimum and maximum number limits,
+no letters or special characters allowed.
+If nothing is selected for charactersparameters for the password, an error message will alert the user they must pick 
+something.
